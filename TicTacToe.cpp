@@ -1,15 +1,25 @@
+//******************************************* Header Files ******************************************
 #include <iostream>
 #include<stdio.h>
 #include<stdlib.h>
 #include <graphics.h>
+//**************************************************************************************************
+
 using namespace std;
 
-// To design board of tic tac toe
+//************************** To design board of tic tac toe ****************************************
 void design()
 {
-    settextstyle(10,0,6);	// to modify the size, direction ans font of text
-    int w=textwidth("Tic Tac Toe"); 	// to find the width of the text
-    outtextxy((400-w)/2,80,"Tic Tac Toe");	// To write the text to the given cordinates
+        //The header file graphics.h contains settextstyle() function which is used to change the way in which text appears.
+	//Using it we can modify the size of text, change direction of text and change the font of text.
+        settextstyle(10,0,6);
+
+        // to find the width of the text
+	//The header file graphics.h contains textwidth () function which returns the width of input string in pixels
+        int w=textwidth("Tic Tac Toe"); 
+    
+        //The header file graphics.h contains outtextxy() function which displays the text or string at a specified point (x, y) on the screen
+        outtextxy((400-w)/2,80,"Tic Tac Toe");	
 	
 	// three line function is used to increase the width of the tic tac toe board
 	line(160,220,160,460);
@@ -28,13 +38,18 @@ void design()
 	line(240+1,220,240+1,460);
 	line(240-1,220,240-1,460);
 
-    settextstyle(10,0,2);
-    int h=textheight("By Amit and Chetan");
-    w=textwidth("By Amit and Chetan");
-    outtextxy(400-w-5,600-h,"By Amit and Chetan");
+        settextstyle(10,0,2);
+	
+	//The header file graphics.h contains textheight() function which returns the height of input string in pixels.
+        int h=textheight("By Amit and Chetan");
+	
+        w=textwidth("By Amit and Chetan");
+        outtextxy(400-w-5,600-h,"By Amit and Chetan");
 }
+//***************************************************************************************************
 
-// dis function is called to mark X and O on tci tac toe Board
+
+//****************** dis function is called to mark X and O on Tic-Tac-Toe Board ********************
 void dis(int turn, int p)
 {
     settextstyle(10,0,6);
@@ -109,9 +124,9 @@ void dis(int turn, int p)
             break;
 
     }
-
-
 }
+//***************************************************************************************************
+
 
 // fun check if the winning condition of either player is fullfilled or not
 int fun(char *a){
@@ -138,14 +153,16 @@ int fun(char *a){
     return 0;
 }
 
-
+//**************************************** main function **********************************************
 int main()
 {
     //Tic Tac Toe
+    //Initializing a window of size 400*600 (Height * width) with the help of Inbuilt initgraph() function.
     initwindow(400,600,"Tic Tac Toe");
     
-    // To create board
+    // design function is called to create the board.
     design();
+	
     int x=0;
     
     // POINT is a stucture which define the x and y cordinates of a points and pos is a object of POINT
@@ -309,3 +326,4 @@ int main()
     getch();
     return 0;
 }
+//**************************************************************************************************
