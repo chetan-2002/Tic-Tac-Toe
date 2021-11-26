@@ -29,11 +29,6 @@ location might be **("C:\MinGW\lib\")**
 ## Contributing
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into master! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
 
-## Screen Shots
-![image](https://user-images.githubusercontent.com/77783033/143619432-f0ba8641-b95a-4112-b9be-b581600e3c26.png)
-
-![image](https://user-images.githubusercontent.com/77783033/143619534-8c73d971-c829-424e-8919-a89aba074efa.png)
-
 ## Credits
 [Amit Kumar Thakur](https://github.com/AmitThakur045)
 
