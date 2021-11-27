@@ -174,18 +174,24 @@ int main()
     settextstyle(10,0,3);
     int w=textwidth("Your Turn !!");
     outtextxy((400-w)/2,500,"Your Turn !!");
+	
+	
     while(x==0 && turn<=9)
     {	
+	    
     	// check the state of mouse if the left button is clicked or not
     	// VL_KBUTTON -> return the status of left key in mouse (0 -> not pressed, 1-> pressed)
     	// GetAsyncKeyState -> check if the left key is pressed or not at the time of evaluation
         if(GetAsyncKeyState(VK_LBUTTON))
         {
-        	// GetCurSorPos -> retrives the position of mouse pointer
+		
+            // GetCurSorPos -> retrives the position of mouse pointer
             GetCursorPos(&pos);
-            // mousex() and mousey() are the function provided by graohic.h
+		
+            // mousex() and mousey() are the function provided by graphic.h
             long X=mousex(); // return the most recent x coordinate of mouse within graphics window
             long Y=mousey(); // return the most recent y coordinate of mouse within graohics window 
+		
             int mov=0;
             if(turn%2==0){
                 if(X>80 && X<160 && Y>220 && Y<300 && b[0]==0)     //b1
